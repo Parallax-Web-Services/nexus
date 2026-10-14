@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "./account-shell.css";
+
+/* Dark mode is driven by the .dark class (set by AppLayout), matching
+   Slipstream's approach — not the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* Workspace colors are shared with the command deck through shell tokens. */
+    --color-abyss: #050b14;
+    --font-sans: 'Exo 2', ui-sans-serif, system-ui, sans-serif;
+}

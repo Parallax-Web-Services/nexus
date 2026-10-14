@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+<title id="title">Continuum — command vector</title>
+<defs><linearGradient id="command" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#FFF0C7"/><stop offset=".5" stop-color="#E7BB73"/><stop offset="1" stop-color="#B98044"/></linearGradient></defs>
+<path fill="url(#command)" fill-rule="evenodd" d="M64 8L112 112L64 87L16 112ZM64 40L37 88L64 75L91 88Z"/>
+<path fill="#FFF0C7" d="M64 49L73 68L64 74L55 68Z"/>
+</svg>

@@ -1,0 +1,69 @@
+{
+    "name": "parallax/nexus",
+    "type": "project",
+    "description": "NEXUS: open-source accounts, teams, OAuth 2.0 sign-in and optional Stripe billing for a suite of Laravel apps.",
+    "license": "MIT",
+    "require": {
+        "php": "^8.5",
+        "guzzlehttp/guzzle": "^7.9.3",
+        "inertiajs/inertia-laravel": "^2.0",
+        "laravel/cashier": "^16.0",
+        "laravel/framework": "^13.0",
+        "laravel/jetstream": "^v5",
+        "laravel/passport": "^13",
+        "laravel/sanctum": "^4",
+        "laravel/tinker": "^3.0",
+        "spatie/laravel-permission": "^6.20",
+        "symfony/http-client": "^7.3",
+        "symfony/mailgun-mailer": "^7.3",
+        "tightenco/ziggy": "^2.5"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.41",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^12.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

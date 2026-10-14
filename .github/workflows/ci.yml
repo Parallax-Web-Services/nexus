@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      APP_ENV: testing
+      DB_CONNECTION: sqlite
+      DB_DATABASE: ${{ github.workspace }}/database/ci.sqlite
+      CACHE_DRIVER: array
+      MAIL_MAILER: log
+      QUEUE_CONNECTION: sync
+      SESSION_DRIVER: array
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: bcmath, curl, dom, fileinfo, mbstring, openssl, pdo_sqlite, sqlite3, tokenizer, xml, zip
+          tools: composer:v2
+          coverage: none
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Prepare disposable environment
+        run: |
+          cp .env.example .env
+          touch "$DB_DATABASE"
+
+      - name: Install locked PHP dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Generate application key
+        run: php artisan key:generate --force --no-interaction
+
+      - name: Install locked frontend dependencies
+        run: npm ci
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Verify fresh installation and repeatable seeds
+        run: |
+          php artisan migrate --seed --no-interaction
+          php artisan db:seed --no-interaction
+          php artisan db:seed --class=DemoSeeder --no-interaction
+          php artisan db:seed --class=DemoSeeder --no-interaction
+          php artisan storage:link --no-interaction
+          php artisan passport:keys --no-interaction
+          php artisan passport:client --personal --name="Nexus Personal Access" --provider=users --no-interaction
+
+      - name: Run isolated tests
+        run: php vendor/bin/phpunit

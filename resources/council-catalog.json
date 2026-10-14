@@ -1,0 +1,169 @@
+{
+  "account_id": "acct_18gdcJC81nt8Pujp",
+  "livemode": true,
+  "currency": "usd",
+  "plans": {
+    "continuum": {
+      "name": "Continuum / CEO",
+      "executives": [
+        "continuum"
+      ],
+      "product_id": "parallax_council_continuum",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLGzC81nt8PujpGQGY8sfW",
+          "lookup_key": "parallax_council_continuum_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "slipstream": {
+      "name": "Slipstream / CTO",
+      "executives": [
+        "slipstream"
+      ],
+      "product_id": "parallax_council_slipstream",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLH3C81nt8PujpwmYdnPhK",
+          "lookup_key": "parallax_council_slipstream_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "parity": {
+      "name": "Quark / CFO",
+      "executives": [
+        "parity"
+      ],
+      "product_id": "parallax_council_parity",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLH7C81nt8PujpROvno6ey",
+          "lookup_key": "parallax_council_parity_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "plexus": {
+      "name": "Plexus / COO",
+      "executives": [
+        "plexus"
+      ],
+      "product_id": "parallax_council_plexus",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHBC81nt8PujpRAaF9SYR",
+          "lookup_key": "parallax_council_plexus_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "positronic": {
+      "name": "Positronic / CIO",
+      "executives": [
+        "positronic"
+      ],
+      "product_id": "parallax_council_positronic",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHFC81nt8PujpNk9xvb22",
+          "lookup_key": "parallax_council_positronic_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "pulsar": {
+      "name": "Pulsar / CMO",
+      "executives": [
+        "pulsar"
+      ],
+      "product_id": "parallax_council_pulsar",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHIC81nt8PujpPrHNllsq",
+          "lookup_key": "parallax_council_pulsar_monthly_v1",
+          "amount": 2900,
+          "interval": "month"
+        }
+      }
+    },
+    "founder": {
+      "name": "Founder Launch Team",
+      "executives": [
+        "continuum",
+        "slipstream",
+        "plexus"
+      ],
+      "product_id": "parallax_council_founder",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHdC81nt8PujpTFN8dNZR",
+          "lookup_key": "parallax_council_founder_monthly_v1",
+          "amount": 6900,
+          "interval": "month"
+        },
+        "annual": {
+          "id": "price_1UOLHhC81nt8PujpHgVDt2wr",
+          "lookup_key": "parallax_council_founder_annual_v1",
+          "amount": 69000,
+          "interval": "year"
+        }
+      }
+    },
+    "growth": {
+      "name": "Growth Team",
+      "executives": [
+        "continuum",
+        "pulsar",
+        "parity"
+      ],
+      "product_id": "parallax_council_growth",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHmC81nt8PujpidvZ7YL1",
+          "lookup_key": "parallax_council_growth_monthly_v1",
+          "amount": 6900,
+          "interval": "month"
+        },
+        "annual": {
+          "id": "price_1UOLHpC81nt8PujpIFbMikvQ",
+          "lookup_key": "parallax_council_growth_annual_v1",
+          "amount": 69000,
+          "interval": "year"
+        }
+      }
+    },
+    "full": {
+      "name": "Full Executive Council",
+      "executives": [
+        "continuum",
+        "slipstream",
+        "parity",
+        "plexus",
+        "positronic",
+        "pulsar"
+      ],
+      "product_id": "parallax_council_full",
+      "prices": {
+        "monthly": {
+          "id": "price_1UOLHtC81nt8PujpI6vZgSpq",
+          "lookup_key": "parallax_council_full_monthly_v1",
+          "amount": 12900,
+          "interval": "month"
+        },
+        "annual": {
+          "id": "price_1UOLHyC81nt8Pujpc5BVLxZF",
+          "lookup_key": "parallax_council_full_annual_v1",
+          "amount": 129000,
+          "interval": "year"
+        }
+      }
+    }
+  }
+}
