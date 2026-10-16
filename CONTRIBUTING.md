@@ -1,6 +1,6 @@
 # Contributing to Nexus
 
-Nexus is preparing for an open-source release. Licensing and public contribution policies are still pending. Use these instructions when working in an authorized checkout; do not assume a public release has occurred.
+NEXUS is publicly available under the [MIT license](LICENSE). Issues, focused pull requests and constructive feedback are welcome. NEXUS is also used inside Parallax, but a contributor should be able to work from a standalone installation without internal company infrastructure.
 
 ## Get a working installation
 
@@ -45,6 +45,8 @@ The current integration surface is Passport OAuth 2.0 plus `GET /api/me`. Do not
 
 [Helm by Parallax](https://github.com/Parallax-Web-Services/helm) is the reference client application.
 
-## Release boundaries
+## Security and release boundaries
 
-NEXUS is licensed under MIT. Do not add a release announcement, security-reporting address, or compatibility guarantee on behalf of the project. Those decisions remain with the maintainers. A public security-reporting process is part of the remaining release preparation.
+For suspected security vulnerabilities, follow [SECURITY.md](SECURITY.md); do not include exploit details in a public issue or pull request. Be constructive and respectful toward other contributors. GitHub reporting tools can be used for abusive interactions.
+
+Source availability under MIT does not imply a published, versioned release or support guarantee. Maintainers choose release versions, security contact details, and compatibility commitments. See the [first-release checklist](docs/RELEASE-CHECKLIST.md) for open verification items.

@@ -1,0 +1,48 @@
+name: Bug report
+description: Report reproducible NEXUS behavior without disclosing secrets.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not report vulnerabilities publicly. Follow [SECURITY.md](../../SECURITY.md) for private reporting instructions."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Accounts / teams
+        - OAuth 2.0 / tokens
+        - Service entitlements
+        - Optional Stripe billing
+        - Installation / database
+        - API integration
+        - UI / accessibility
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: "Use a local/test installation and sanitized example accounts."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      placeholder: "Commit/version; PHP, Node, database and OS"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or screenshots (optional)
+      description: "Do not share client secrets, tokens, webhook keys, or personal data."

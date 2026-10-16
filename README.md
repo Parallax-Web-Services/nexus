@@ -4,6 +4,14 @@ NEXUS is the shared core inside PARALLAX. It is a Laravel and Vue application fo
 
 The stack is Laravel 13, Vue 3, Inertia, Jetstream, and Passport.
 
+## Why we're opening this up
+
+NEXUS grew out of shared account and application infrastructure developed at Parallax alongside Slipstream and Continuum. We're sharing it for teams building their own connected applications. You can self-host NEXUS; no hosted Parallax account, paid plan or company domain is required for the standalone setup.
+
+NEXUS and [HELM by Parallax](https://github.com/Parallax-Web-Services/helm) are complementary, not inseparable: NEXUS owns accounts, teams and application access; HELM provides the Laravel/React command deck and acts as an example OAuth client. HELM also offers local demo sign-in without NEXUS.
+
+**Current protocol boundary:** OAuth 2.0 / Passport is available. NEXUS is not currently an OpenID Connect provider and does not advertise OIDC discovery or ID tokens.
+
 ## Local setup
 
 These commands are for a new checkout in Linux or WSL. Run all commands inside the same Linux environment.
@@ -89,7 +97,11 @@ php vendor/bin/phpunit
 
 PHPUnit forces an isolated, in-memory SQLite database. CI installs the locked dependencies, builds the frontend, verifies migration and repeatable seeding on a disposable SQLite database, and runs the test suite.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution scope and validation guidance.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution scope and validation guidance, [SECURITY.md](SECURITY.md) for private vulnerability reporting, and the [first public release checklist](docs/RELEASE-CHECKLIST.md) for remaining verification work.
+
+## Releases and maintenance
+
+Current work is tracked in the [unreleased change notes](CHANGELOG.md) and [first public release checklist](docs/RELEASE-CHECKLIST.md). The public source repository is available under MIT; this does not imply an initial version tag, production support promise, or OpenID Connect certification.
 
 ## License
 
