@@ -99,6 +99,10 @@ PHPUnit forces an isolated, in-memory SQLite database. CI installs the locked de
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution scope and validation guidance, [SECURITY.md](SECURITY.md) for private vulnerability reporting, and the [first public release checklist](docs/RELEASE-CHECKLIST.md) for remaining verification work.
 
+## Releases and maintenance
+
+Current work is tracked in the [unreleased change notes](CHANGELOG.md) and [first public release checklist](docs/RELEASE-CHECKLIST.md). The public source repository is available under MIT; this does not imply an initial version tag, production support promise, or OpenID Connect certification.
+
 ## License
 
 NEXUS is open-source software licensed under the [MIT license](LICENSE).
